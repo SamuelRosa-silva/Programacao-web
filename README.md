@@ -1,3 +1,3 @@
 Projeto Desenvolve - Itabira
-Programação básica com Python
+Programação básica web
 PD 399
