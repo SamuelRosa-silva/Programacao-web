@@ -1,10 +1,10 @@
 /*definição de variaveis do site*/
 
 :root {
-    --main-color: #d3ad7f;
+    --main-color: #fa8e0b;    /*   MUDANÇA   foi mudada a cor de destaque da pagina*/
     --bc: #8F511E;
-    --brown: #13131a;
-    --bg: rgb(21,3,3);
+    --brown: #13131a; /*   MUDANÇA   mudança leve de cor*/
+    --bg: rgb(20, 1, 1);
     --bl: #FFFFFF;
     --border: 0.1rem solid rgba(255, 255, 255, 0.3);
     font-size: 10px;
@@ -56,7 +56,7 @@ section {
 /*cor e tamanho de fonte das palavras da nav bar*/
 
 .navbar a {
-    margin: 0.35rem;
+    margin: 1.25rem;  /*MUDANÇA  aumentada a distancia entre os links do navbar*/
     font-size: 1.9rem;
     color: var(--bl)
 }
@@ -85,14 +85,19 @@ section {
 .btn {
     background: var(--main-color);
     color: #fff;
-    padding: 1rem 1rem;
+    padding: 1.5rem 1rem; /* MUDANÇA  ampliado o padding para dar mais espaço para o texto dentro do botão  */    
     font-size: 1.7rem;
     cursor: pointer;
     margin-top: -1rem;
     display: inline-block;
 }
 
-/* bloco responsavel pela animção do botão de compra da tela home*/
+#btn-orçamento {  /* MUDANÇA   mudança especifica no botão de orçamento para afasta-lo do texto */ 
+    padding: 1.5rem 1rem;
+    margin-top: 1rem
+}
+
+/* bloco responsavel pela animação do botão de compra da tela home*/
 
 .btn:hover {
     letter-spacing: 0.15rem;
@@ -102,7 +107,7 @@ section {
 
 .home-container {
     background: url(imagens/home.jpg);
-    height: 100vh;
+    height: 80vh;      /* MUDANÇA  alterada a altura do titulo para sinalizar ao usuario que ha mais conteudo abaixo do titulo*/
     background-position: center;
     background-size: cover;
 }
@@ -112,13 +117,13 @@ section {
 .home-container section {
     display: flex;
     align-items: center;
-    min-height: 100vh;
+    min-height: 70vh;    /*MUDANÇA  titulo levemente elevado para não entrar em conflito com a imagem */
 }
 
 /*margem do titulo da pagina home*/
 
 .content {
-    max-width: 60rem;
+    max-width: 50rem;
 }
 
 /*titulo da pagina home*/
@@ -182,3 +187,9 @@ section {
 body {
     background-color: var(--bg);
 }
+
+
+/*Mapa e endereço*/
+
+
+
