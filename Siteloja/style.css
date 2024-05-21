@@ -1,0 +1,184 @@
+/*definição de variaveis do site*/
+
+:root {
+    --main-color: #d3ad7f;
+    --bc: #8F511E;
+    --brown: #13131a;
+    --bg: rgb(21,3,3);
+    --bl: #FFFFFF;
+    --border: 0.1rem solid rgba(255, 255, 255, 0.3);
+    font-size: 10px;
+}
+
+/*bloco resnponsavel por zerar todas as configs de estilização do site*/
+
+* {
+    font-family: "Roboto", sans-serif;
+    transition: 0.15s linear;
+    border: none;
+    margin: 0;
+    text-decoration: none;
+    padding: 0;
+    text-transform: none;
+    outline: none;
+}
+
+/*margem da pagina*/
+
+section {
+    padding: 3rem 2rem;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+/*bloco responsavel pelo cabeçalho do site*/
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 99;
+    border-bottom: var(--border);
+    background-color: var(--bg);
+}
+
+/*bloco responsavel por configurações de epaçaento e confgs dos elementos do cabeçalho*/
+
+.header section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+
+/*cor e tamanho de fonte das palavras da nav bar*/
+
+.navbar a {
+    margin: 0.35rem;
+    font-size: 1.9rem;
+    color: var(--bl)
+}
+
+.navbar a:hover {
+    color: var(--main-color);
+    border-bottom: 0.1rem solid var(--border);
+    padding-bottom: 0.4rem;
+    font-size: 2rem;
+}
+
+.icons img{
+    margin: 1rem;
+    cursor: pointer;
+}
+
+/*bloco responsavel pelo espaçamento da animação dos simbolos da cabeçalho*/
+
+.icons img:hover {
+    width: 30px;
+    height: 30px;
+}
+
+/*Atributos do botão de compra da pagina home*/
+
+.btn {
+    background: var(--main-color);
+    color: #fff;
+    padding: 1rem 1rem;
+    font-size: 1.7rem;
+    cursor: pointer;
+    margin-top: -1rem;
+    display: inline-block;
+}
+
+/* bloco responsavel pela animção do botão de compra da tela home*/
+
+.btn:hover {
+    letter-spacing: 0.15rem;
+}
+
+/*bloco responsavel pela imagem de funda pagina home*/
+
+.home-container {
+    background: url(imagens/home.jpg);
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+}
+
+/*alinhamento do titulo da pagina home*/
+
+.home-container section {
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/*margem do titulo da pagina home*/
+
+.content {
+    max-width: 60rem;
+}
+
+/*titulo da pagina home*/
+
+.content h3 {
+    color: #fff;
+    font-size: 6rem;
+}
+
+/*sub titulo da pagina home*/
+
+.content p {
+    color:#ffffff;
+    font-size: 2rem;
+    font-weight: 100;
+    line-height: 1.8;
+    padding: 1rem;
+}
+
+.title{
+    font-size: 4rem;
+    color: var(--main-color);
+    text-align: center  ;
+    text-transform: uppercase;
+    margin-bottom: 4rem;
+}
+
+.title span {
+    color: #fff;
+    text-transform: uppercase;
+}
+
+/*alinhamento do fundo do texto da pagina sobre*/
+
+.about .row {
+    display: flex;
+    align-items: center;
+    background-color: var(--bc);
+    gap: 1.6rem;
+    line-height: 0;
+}
+
+.about .row .content {
+    padding: 0rem;
+}
+
+/*tamanho fonte da pag sobre*/
+
+.about .row .content h3 {
+    font-size: 2.3rem;
+    color: #fff;
+}
+
+.about .row .content p {
+    font-size: 1.4rem;
+    color: #fff;
+    padding: 3.5rem 0;
+    line-height: 1.5;
+}
+
+body {
+    background-color: var(--bg);
+}
