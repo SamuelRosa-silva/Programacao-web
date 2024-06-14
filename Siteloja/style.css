@@ -1,15 +1,6 @@
-/*definição de variaveis do site*/
+@media screen and (max-width: 500px){
 
-:root {
-    --main-color: #d3ad7f;
-    --bc: #8F511E;
-    --brown: #13131a;
-    --bg: rgb(21,3,3);
-    --bl: #FFFFFF;
-    --border: 0.1rem solid rgba(255, 255, 255, 0.3);
-    font-size: 10px;
 }
-
 /*bloco resnponsavel por zerar todas as configs de estilização do site*/
 
 * {
@@ -23,9 +14,41 @@
     outline: none;
 }
 
+/*definição de variaveis do site*/
+
+
+:root{
+    --main-color: #8a663a;
+    --bc: #b96724;
+    --brown: #13131a;
+    --bg: rgb(21,3,3);
+    --bl: #FFFFFF;
+    --border: 0.1rem solid rgba(255, 255, 255, 0.3);
+    font-size: 10px;
+}
+
+.container{
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    transform: translate(0);
+}
+
+/*bloco responsavel por animação das fotos da pagina de trabalho*/
+
+.carrossel {
+    display: flex;
+    align-items: center;
+    box-shadow: 2px 2px 4px black;
+    overflow: hidden;
+    height: 485px;
+    width: 820px;
+    width: 100%;
+    height: auto;
+}
+
 /*margem da pagina*/
 
-section {
+section{
     padding: 3rem 2rem;
     margin: 0 auto;
     max-width: 1200px;
@@ -33,7 +56,7 @@ section {
 
 /*bloco responsavel pelo cabeçalho do site*/
 
-.header {
+.header{
     position: fixed;
     top: 0;
     left: 0;
@@ -50,14 +73,14 @@ section {
     align-items: center;
     justify-content: space-between;
     padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
+    padding-bottom: 1.6rem;
 }
 
 /*cor e tamanho de fonte das palavras da nav bar*/
 
 .navbar a {
-    margin: 0.35rem;
-    font-size: 1.9rem;
+    margin: 0.8rem;
+    font-size: 2rem;
     color: var(--bl)
 }
 
@@ -68,7 +91,7 @@ section {
     font-size: 2rem;
 }
 
-.icons img{
+.icons img {
     margin: 1rem;
     cursor: pointer;
 }
@@ -88,7 +111,7 @@ section {
     padding: 1rem 1rem;
     font-size: 1.7rem;
     cursor: pointer;
-    margin-top: -1rem;
+    margin-top: 1rem;
     display: inline-block;
 }
 
@@ -118,14 +141,14 @@ section {
 /*margem do titulo da pagina home*/
 
 .content {
-    max-width: 60rem;
+    max-width: 600rem;
 }
 
 /*titulo da pagina home*/
 
 .content h3 {
-    color: #fff;
-    font-size: 6rem;
+    color: black;
+    font-size: 4rem;
 }
 
 /*sub titulo da pagina home*/
@@ -134,8 +157,8 @@ section {
     color:#ffffff;
     font-size: 2rem;
     font-weight: 100;
-    line-height: 1.8;
-    padding: 1rem;
+    line-height: 1;
+    padding: 1rem 0;
 }
 
 .title{
@@ -157,7 +180,7 @@ section {
     display: flex;
     align-items: center;
     background-color: var(--bc);
-    gap: 1.6rem;
+    gap:1.6rem;
     line-height: 0;
 }
 
@@ -181,4 +204,36 @@ section {
 
 body {
     background-color: var(--bg);
+}
+
+/*bloco responsavel por atributos da pagina endereço*/
+
+.address{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.footer {
+    text-align: center;
+}
+.footer .share{
+    padding: 1rem 0;
+}
+.footer .share img{
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.footer .share img:hover{
+    background-color: var(--bg);
+}
+
+
+.content h3 {
+    align-items: center;
+    display: flex;
+    color: #ffffff;
+    font-size: 6rem;
+    
 }
