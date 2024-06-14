@@ -1,0 +1,96 @@
+/*bloco resnponsavel por definir as configs de estilização do site*/
+
+* {
+    font-family: "Arial";
+    transition: 0.15s linear;
+    text-decoration: none;
+    text-transform: none;
+    outline: none;
+}
+
+/*bloco responsavel pelo cabeçalho*/
+
+header {
+    background-color: #cccccc;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 1em 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+}
+
+strong {
+    color: red;
+}
+
+/*bloco responsavel do corpo do site*/
+
+body {
+    display: flex;
+    background-color: rgb(173, 173, 173);
+    margin: 15rem;
+    padding: 0rem;
+    display: flex;
+    flex-direction: row;
+    margin-top: 8rem;
+    margin-left: 0rem;
+}
+
+/*bloco para alinhar os titulos dos paragrafos*/
+
+h2 {
+    padding-left: 4rem;
+}
+
+/*bloco para alinhar os titulos dos paragrafos*/
+
+h1 {
+    padding-left: 4rem;
+}
+
+/*bloco responsavel por defiir margens entre os parágrafos horizontais */
+p {
+    margin-right:2rem;
+    margin-left: 4rem;
+}
+
+/*bloco responsavel por defiir a cor dos links para vermelho */
+a {
+    color: red;
+}
+
+/*bloco responsavel por defiir a cor dos links para limão quando sobrepostos pelo mouse */
+a:hover {
+    color: lime;
+}
+
+.destaque {
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+.destaque p {
+        font-weight: bold;
+}
+
+.destaque strong {
+    color: red;
+}
+
+/* bloco responsavel por defiir negrito para os parágrafos imediatamente após o h1 */
+h1 + p {
+    font-weight: bold;
+}
+
+/*bloco responsavel do roda-pe*/
+
+footer {
+    background-color: #cccccc;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 1em 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
