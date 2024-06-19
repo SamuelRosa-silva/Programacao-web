@@ -1,0 +1,10 @@
+/*bloco responsavel por definir variaveis para o site*/
+
+:root {
+    --pc: #170826;
+    --sc: #594A8C;
+    --tc: #9F88F2;
+    --qc: #B2A0F2;
+    --bl: #F2F2F2;
+    --border: 0.1rem solid rgba(255, 255, 255, 0.3);
+}
