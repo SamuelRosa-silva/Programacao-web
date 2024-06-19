@@ -8,3 +8,50 @@
     --bl: #F2F2F2;
     --border: 0.1rem solid rgba(255, 255, 255, 0.3);
 }
+
+/*bloco responsavel pelas definições do corpo do site*/
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    width: 800px;
+    margin: 20px auto;
+}
+
+/*bloco responsavel por parágrafos */
+p {
+    text-indent: 1em;
+}
+
+/*bloco responsavel por centralizar os textos*/
+h1, h2, h3 {
+    text-align: center;
+}
+
+h1 {
+    font-size: 1.8rem;
+}
+
+h2 {
+    font-size: 1.4rem;
+}
+
+h3 {
+    font-size: 1.2rem;
+}
+
+/* Seções de resumo e principal */
+.intro {
+    text-align: center; /* Alinhando a seção de resumo centralizada */
+}
+
+/*bloco resposavel por definir o espaçamento entre as linhas*/
+.main {
+    line-height: 1.5;
+}
+
+/* bloco responsavel por adicionar small-caps para as abreviaturas*/
+abbr {
+    font-variant: small-caps;
+}
