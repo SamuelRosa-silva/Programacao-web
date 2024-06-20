@@ -1,4 +1,4 @@
-/*bloco responsavel por definir variaveis para o site*/
+/* bloco responsavel por definir variaveis para o site */
 :root {
     --pc: #170826;
     --sc: #594A8C;
@@ -12,10 +12,10 @@
 header {
     color: var(--wht);
     background-color: var(--pc);
-    padding: 1%; 
+    padding: 1%;
     display: flex;
     align-items: center;
-    margin: 0%;
+    margin: 0;
     text-align: center;
 }
 
@@ -45,21 +45,24 @@ body {
     margin: 20px auto;
 }
 
-/*bloco responsavel por definir a altura da seção incial*/
+/*bloco responsavel por definir a altura da seção inicial*/
 #zen-intro {
     height: 550px;
 }
 
-/*bloco responsavel pelo roda-pe*/
+/*bloco responsavel pelo rodapé*/
 footer {
     background-color: var(--pc);
     color: var(--wht);
     text-align: center;
     padding: 1em 0;
     margin-top: 4%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
-/*links do rodapé*/
 footer a {
     display: inline-block;
     border: 2px solid var(--wht);
@@ -67,6 +70,7 @@ footer a {
     margin: 0.5em;
     color: var(--wht);
     text-decoration: none;
+    min-width: 100px;
 }
 
 /*bloco responsavel pelos menus*/
@@ -80,13 +84,15 @@ ul li {
     text-align: center;
 }
 
-/*bloco responsavel por parágrafos */
+/* bloco responsavel por parágrafos */
 p {
     text-indent: 1em;
 }
 
-/*bloco responsavel por centralizar os textos*/
-h1, h2, h3 {
+/* bloco responsavel por centralizar os textos */
+h1,
+h2,
+h3 {
     text-align: center;
 }
 
@@ -107,12 +113,95 @@ h3 {
     text-align: center;
 }
 
-/*bloco resposavel por definir o espaçamento entre as linhas*/
+/* bloco responsavel por definir o espaçamento entre as linhas */
 .main {
     line-height: 1.5;
 }
 
-/* bloco responsavel por adicionar small-caps para as abreviaturas*/
+/* bloco responsavel por adicionar small-caps para as abreviaturas */
 abbr {
     font-variant: small-caps;
+}
+
+/* bloco responsavel pela seção de benefícios */
+.benefits-section {
+    display: flex;
+    border-top: var(--border);
+    border-bottom: var(--border);
+}
+
+.benefits-section .text {
+    flex: 0 0 70%;
+    padding: 1em;
+}
+
+.benefits-section .title {
+    flex: 0 0 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/*bloco responsavel pela seção de participação */
+.participation-section {
+    display: flex;
+    border-bottom: var(--border);
+}
+
+.participation-section .item {
+    flex: 1;
+    padding: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/*Removendo borda duplicada entre as seções de benefícios e participação*/
+.benefits-section+.participation-section {
+    border-top: 0;
+}
+
+/*bloco responsavel pelo media query para telas menores que 768 pixels*/
+@media (max-width: 768px) {
+
+    #design-archives {
+        display: none;
+    }
+
+    .benefits-section,
+    .participation-section {
+        border-left: none;
+        border-right: none;
+    }
+
+    .benefits-section,
+    .participation-section {
+        flex-direction: column;
+    }
+
+    header {
+        height: auto;
+    }
+
+    p {
+        text-indent: 0;
+    }
+
+}
+
+/*bloco responsavel por parte media query*/
+@media print {
+
+    body {
+        font-family: "Times New Roman", Times, serif;
+    }
+
+    /*bloco responsavel pr inverte as cores do cabeçalho*/
+    header {
+        color: var(--pc);
+        background-color: var(--wht);
+    }
+
 }
