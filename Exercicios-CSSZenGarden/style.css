@@ -1,12 +1,37 @@
 /*bloco responsavel por definir variaveis para o site*/
-
 :root {
     --pc: #170826;
     --sc: #594A8C;
     --tc: #9F88F2;
     --qc: #B2A0F2;
-    --bl: #F2F2F2;
+    --wht: #F2F2F2;
     --border: 0.1rem solid rgba(255, 255, 255, 0.3);
+}
+
+/*bloco reponsavel pelo cabeçalho*/
+header {
+    color: var(--wht);
+    background-color: var(--pc);
+    padding: 1%; 
+    display: flex;
+    align-items: center;
+    margin: 0%;
+    text-align: center;
+}
+
+header h1 {
+    text-align: center;
+    margin-left: 1em;
+}
+
+header h2 {
+    text-align: center;
+    margin-right: 1em;
+}
+
+/*bloco responsavel por remover o container da renderização*/
+#design-archives {
+    display: none;
 }
 
 /*bloco responsavel pelas definições do corpo do site*/
@@ -15,8 +40,44 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    width: 800px;
+    width: 80%;
+    max-width: 1280px;
     margin: 20px auto;
+}
+
+/*bloco responsavel por definir a altura da seção incial*/
+#zen-intro {
+    height: 550px;
+}
+
+/*bloco responsavel pelo roda-pe*/
+footer {
+    background-color: var(--pc);
+    color: var(--wht);
+    text-align: center;
+    padding: 1em 0;
+    margin-top: 4%;
+}
+
+/*links do rodapé*/
+footer a {
+    display: inline-block;
+    border: 2px solid var(--wht);
+    padding: 0.5em;
+    margin: 0.5em;
+    color: var(--wht);
+    text-decoration: none;
+}
+
+/*bloco responsavel pelos menus*/
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    margin-bottom: 1em;
+    text-align: center;
 }
 
 /*bloco responsavel por parágrafos */
@@ -43,7 +104,7 @@ h3 {
 
 /* Seções de resumo e principal */
 .intro {
-    text-align: center; /* Alinhando a seção de resumo centralizada */
+    text-align: center;
 }
 
 /*bloco resposavel por definir o espaçamento entre as linhas*/
