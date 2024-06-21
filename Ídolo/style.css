@@ -1,0 +1,128 @@
+/*bloco responsavel pelo cabeçalho*/
+
+header {
+    background-image: url(./imgs/Sc.jpg);
+    width: 619px;
+    height: 118px;
+    display: flex;
+    justify-content: center;
+    background-repeat: no-repeat;
+    height: 118px;
+    mask-image: linear-gradient( #000 50% rgba(0,0,0 0.01) 90%);
+    text-align: left;
+    padding: 20px 0;
+}
+
+#nurs {
+    mask-image: linear-gradient(to bottom, #000 50% rgba(0,0,0 0.01) 90%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*bloco responsavel pelo corpo*/
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+h2 {
+    text-align: center;
+}
+
+/*bloco responsavel pelo link do roda-pe*/
+
+#senna {
+    color: white;
+}
+
+/*bloco responsavel pela imagem de perfil*/
+
+#profile {
+    float: right;
+    width: 30%;
+    margin-top: 65px;
+    margin-right: 20px;
+}
+
+/*bloco responsavel pela imagem de perfil*/
+
+#profile img {
+    width: 100%;
+    border-radius: 50%;
+}
+
+#tgt {
+    width: 30%;
+    align-items: center;
+}
+
+/*bloco responsavel pelo background da pagina "sobre ele"*/
+
+aside {
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+
+/*bloco responsavel pelo rodape*/
+
+footer {
+    background-color: #92000A;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: flex;
+    bottom: 0;
+    width: 100%;
+}
+
+/*bloco responsavel por toda margem do corpo*/
+
+main {
+    padding: 70px;
+}
+
+/*bloco responsavel por definir o tamanho da lista*/
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+/*bloco responsavel pela linha da lista de conquistas*/
+
+th,
+td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+/*background do cabeçalho da lista*/
+
+th {
+    background-color: #f2f2f2;
+}
+
+/*bloco do carrocel*/
+
+.splide__slide img {
+    width: 100%;
+    height: auto;
+  }
+
+  .splide__slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.splide__slide {
+    opacity: 0.6;
+  }
+  
+  .splide__slide.is-active {
+    opacity: 1;
+  }
