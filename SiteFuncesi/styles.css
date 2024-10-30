@@ -1,0 +1,493 @@
+/* Bloco responsável por zerar todas as configs de estilização do site */
+* {
+  font-family: "Arial", sans-serif;
+  /* Fonte mais formal e simplista */
+  transition: 0.15s linear;
+  /* Transição suave para propriedades CSS */
+  text-decoration: none;
+  /* Remove sublinhados de links */
+  text-transform: none;
+  /* Não transforma o texto */
+  outline: none;
+  /* Remove contorno de elementos focados */
+  max-width: 100vw;
+}
+
+
+html,
+body {
+  max-width: 100vw;
+}
+
+/* Estilização da navbar */
+.navbar {
+  display: flex;
+  /* Usa flexbox para os itens da navbar */
+  justify-content: space-around;
+  /* Espaço igual entre os itens */
+}
+
+.navbar a {
+  color: rgb(255, 255, 255);
+  /* Cor do texto dos links */
+  font-weight: bold;
+  /* Negrito para os links */
+  transition: color 0.3s;
+  /* Transição suave para a cor ao passar o mouse */
+  margin: 0 0.9375rem;
+  /* Margem horizontal entre as opções */
+}
+
+.navbar a:hover {
+  color: rgb(65, 234, 101);
+  /* Cor do texto ao passar o mouse */
+}
+
+/* Estilização do cabeçalho */
+header {
+  padding: 0.5rem;
+  /* Espaçamento interno do cabeçalho */
+  display: flex;
+  /* Usa flexbox para o layout do cabeçalho */
+  align-items: center;
+  /* Alinha itens verticalmente no centro */
+}
+
+/* Estilização do corpo da página */
+body {
+  background-image: url("image/background.png");
+  /* Imagem de fundo */
+  display: flex;
+  /* Usa flexbox para layout */
+  flex-direction: column;
+  /* Alinha os itens verticalmente */
+  min-height: 100vh;
+  /* Garante que o body tenha no mínimo a altura da viewport */
+}
+
+/* Estilização da imagem do cabeçalho */
+.funcesi {
+  width: 12.8125rem;
+  /* Largura da imagem do cabeçalho */
+  height: 3rem;
+  /* Altura da imagem do cabeçalho */
+  margin-right: 35.625rem;
+  /* Espaço entre a imagem e a navbar */
+  margin-top: 0.625rem;
+  /* Margem superior */
+  margin-left: 0.625rem;
+  /* Margem esquerda */
+}
+
+/* Estilização do elemento v2024 */
+.v2024 {
+  display: flex;
+  margin-top: -55px;
+  /* Altura do topo */
+  margin-left: -710px;
+  /* Usa flexbox */
+  height: 120px;
+  /* Altura do elemento */
+  width: 240px;
+  /* Largura do elemento */
+}
+
+/* Estilização do elemento cmvoce */
+.cmvoce {
+  position: absolute;
+  /* Posicionamento absoluto */
+  margin-top: 8.4375rem;
+  /* Margem superior */
+  margin-left: -44.75rem;
+  /* Margem esquerda */
+  height: 27.5rem;
+  /* Altura do elemento */
+  width: 35.625rem;
+  /* Largura do elemento */
+}
+
+.icone {
+  height: 16px;
+  width: 16px;
+}
+
+/* Estilização do botão */
+.botao {
+  position: absolute;
+  /* Posicionamento absoluto */
+  margin-left: 3.1rem;
+  /* Margem esquerda */
+  margin-top: 51.25rem;
+  /* Margem superior */
+  height: 8rem;
+  /* Altura do botão */
+  width: 30.625rem;
+  /* Largura do botão */
+}
+
+/* Estilização do contêiner do formulário */
+form {
+  background-color: #fff;
+  /* Fundo branco */
+  max-width: 26.063rem;
+  /* Largura máxima do formulário */
+  min-height: 37.5rem;
+  /* Altura mínima do formulário */
+  margin: -4rem auto;
+  /* Centraliza horizontalmente com margem superior */
+  margin-right: 4rem;
+  padding: 1.25rem;
+  /* Espaçamento interno do formulário */
+  border-radius: 0.3125rem;
+  /* Bordas arredondadas */
+  box-shadow: 0 0.125rem 0.3125rem rgba(0, 0, 0, 0.1);
+  /* Sombra leve */
+}
+
+.imginst {
+  display: flex;
+  margin-left: -0.5rem;
+}
+
+h1,
+h3 {
+  text-align: center;
+  color: blue;
+}
+
+.send {
+  display: flex;
+  margin-left: 2.5rem;
+  /* Margem esquerda */
+  margin-top: 5.25rem;
+  /* Margem superior */
+  width: 21.25rem;
+  /* Largura */
+  height: 5.3125rem;
+  /* Altura */
+}
+
+.entrada {
+  width: 25rem;
+  height: 1.563rem;
+}
+
+.dropdown {
+  width: 26.313rem;
+  height: 2.938rem;
+}
+
+/* Alinha o formulário à direita */
+.home-container {
+  margin-top: -1.563rem;
+  /* Altura do topo */
+  display: flex;
+  /* Usa flexbox para layout */
+  justify-content: flex-end;
+  /* Alinha o conteúdo à direita */
+  padding: 7.5rem;
+  /* Espaçamento ao redor do contêiner */
+}
+
+/* Estilização dos rótulos (labels) */
+label {
+  display: flex;
+  /* Faz o rótulo ocupar toda a largura disponível */
+
+  /* Espaçamento abaixo do rótulo */
+  text-decoration: color(srgb rgb(255, 255, 255));
+}
+
+/* Estilização de campos de entrada (input) e seletores (select) */
+input,
+select {
+  width: 100%;
+  /* Largura total do campo */
+  padding: 0.625rem;
+  /* Espaçamento interno do campo */
+  margin-bottom: 0.938rem;
+  /* Espaçamento abaixo do campo */
+  border: 0.063rem solid #ccc;
+  /* Borda cinza clara */
+  border-radius: 0.25rem;
+  /* Bordas levemente arredondadas */
+}
+
+.qrcode {
+  margin-bottom: 1.25rem;
+  width: 19.37rem;
+  height: 12.3rem;
+}
+
+/* Estilização do botão ao passar o mouse sobre ele */
+button:hover {
+  background-color: #45a049;
+  /* Cor de fundo do botão quando o mouse está sobre ele */
+}
+
+/*imagem do whatsapp*/
+.whatsapp {
+  /*Define a posição do icone*/
+  position: fixed;
+  /* Altura do icone */
+  width: 13rem;
+  /* Largura do icone */
+  height: 5rem;
+  /* Altura do botão em relação ao topo da pagina */
+  margin-top: -80rem;
+  /* Distancia da lateral do botão em relação ao topo da pagina */
+  margin-left: 80rem;
+}
+
+.funcesirodape {
+  /* Largura do  */
+  height: 2.25rem;
+  width: 9.188rem;
+}
+
+/* Estilização do rodapé */
+footer {
+  margin-top: auto;
+  /* Fixa o rodapé ao final da página */
+  display: flex;
+  /* Usa flexbox para alinhar itens */
+  flex-direction: column;
+  /* Alinha itens verticalmente */
+  align-items: center;
+  /* Centraliza itens horizontalmente */
+  justify-content: center;
+  /* Centraliza itens verticalmente */
+  padding: 20px;
+  /* Espaçamento interno do rodapé */
+  background-color: rgba(23, 45, 166, 0);
+  /* Fundo semi-transparente para o rodapé */
+}
+
+.endereço {
+  font-size: 1rem;
+  /* Tamanho original do texto */
+  color: rgb(255, 255, 255);
+  /* Cor original do texto */
+  transition: color 0.3s, font-size 0.3s;
+  /* Transições suaves */
+}
+
+.endereço:hover {
+  color: rgb(0, 51, 255);
+  /* Nova cor ao passar o mouse */
+  font-size: 1.2rem;
+  /* Novo tamanho ao passar o mouse */
+}
+
+@media(max-width: 450px) {
+  .home-container{
+    display: inline;
+    
+  }
+
+  /*.v2024 {
+    margin-top: -11rem;
+    margin-left: -6rem;
+  }*/
+
+  .dropdown {
+    height: 2.2rem;
+    width: 13.9rem;
+  }
+
+  .entrada {
+    height: 1rem;
+    width: 12.5rem;
+  }
+
+  .send {
+    height: 5rem;
+    width: 15rem;
+    margin-left: -0.5rem;
+    margin-top: 0rem;
+  }
+
+  form {
+    height: 1rem;
+    width: 14rem;
+    margin-left: -4rem;
+
+  }
+
+  .whatsapp {
+    height: 1130rem;
+    width: 1130rem;
+    margin-left: -0.5rem;
+    margin-top: 0rem;
+    
+  }
+
+  .funcesi {
+    height: 1.2rem;
+    width: 5rem;
+    margin-left: 2rem;
+  }
+
+  .imginst {
+    max-height: 20rem;
+  }
+
+  .botao {
+    margin-top: 16.6rem;
+    margin-left: 0.2rem;
+    height: 3rem;
+    width: 8rem;
+  }
+
+  .qrcode {
+    height: 5rem;
+    width: 6rem;
+  }
+
+  .funcesirodape {
+    height: 1.2rem;
+    width: 6rem;
+  }
+
+  .navbar {
+    width: 8rem;
+    margin-left: -15rem;
+  }
+
+  .endereço {
+    text-align: center;
+    height: 0.5rem;
+    width: 16rem;
+  }
+
+  .sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-image: linear-gradient(to bottom, #0e05ab, #0840e9, #1501AD, transparent);
+    /* background-color: #1501AD; */
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    opacity: 0.95;
+  }
+
+  .sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #ffffff;
+    display: block;
+    transition: 0.3s;}
+
+  }
+
+  a {
+    color: #fff;
+    text-decoration: none;
+    transition: 0.3s;
+  }
+  
+  a:hover {
+    opacity: 0.7;
+  }
+  
+  .logo {
+    font-size: 24px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+  }
+  
+  nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
+    background: #23232e;
+    height: 8vh;
+  }
+  
+  main {
+    background: url("bg.jpg") no-repeat center center;
+    background-size: cover;
+    height: 92vh;
+  }
+  
+  .nav-list {
+    list-style: none;
+    display: flex;
+  }
+  
+  .nav-list li {
+    letter-spacing: 3px;
+    margin-left: 32px;
+  }
+  
+  .mobile-menu {
+    display: none;
+    cursor: pointer;
+  }
+  
+  .mobile-menu div {
+    width: 32px;
+    height: 2px;
+    background: #fff;
+    margin: 8px;
+    transition: 0.3s;
+  }
+  
+  @media (max-width: 999px) {
+    body {
+      overflow-x: hidden;
+    }
+    .nav-list {
+      position: absolute;
+      top: 8vh;
+      right: 0;
+      width: 50vw;
+      height: 92vh;
+      background: #23232e;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+      transform: translateX(100%);
+      transition: transform 0.3s ease-in;
+    }
+    .nav-list li {
+      margin-left: 0;
+      opacity: 0;
+    }
+    .mobile-menu {
+      display: block;
+    }
+  }
+  
+  .nav-list.active {
+    transform: translateX(0);
+  }
+  
+  @keyframes navLinkFade {
+    from {
+      opacity: 0;
+      transform: translateX(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  .mobile-menu.active .line1 {
+    transform: rotate(-45deg) translate(-8px, 8px);
+  }
+  
+  .mobile-menu.active .line2 {
+    opacity: 0;
+  }
+  
+  .mobile-menu.active .line3 {
+    transform: rotate(45deg) translate(-5px, -7px);
+  }
