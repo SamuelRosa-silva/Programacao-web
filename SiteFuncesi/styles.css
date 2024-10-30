@@ -279,47 +279,45 @@ footer {
   /* Novo tamanho ao passar o mouse */
 }
 
+/*Responsividade*/
+
 @media(max-width: 450px) {
   .home-container{
     display: inline;
-    
+    height: -12rem;
+    height: 36rem;
   }
 
-  /*.v2024 {
-    margin-top: -11rem;
+  .cmvoce {
+    height: 15rem;
+    width: 20rem;
+    margin-top: -24rem;
     margin-left: -6rem;
-  }*/
+    position: absolute;
+  }
 
   .dropdown {
     height: 2.2rem;
-    width: 13.9rem;
+    width: 19.9rem;
   }
 
   .entrada {
     height: 1rem;
-    width: 12.5rem;
+    width: 18.5rem;
   }
 
   .send {
     height: 5rem;
-    width: 15rem;
-    margin-left: -0.5rem;
-    margin-top: 0rem;
+    width: 20rem;
+    margin-left: -0.1rem;
+    margin-top: 3.6rem;
   }
 
   form {
-    height: 1rem;
-    width: 14rem;
-    margin-left: -4rem;
+    height: 10rem;
+    width: 20rem;
+    margin-left: -7rem;
 
-  }
-
-  .whatsapp {
-    height: 1130rem;
-    width: 1130rem;
-    margin-left: -0.5rem;
-    margin-top: 0rem;
-    
   }
 
   .funcesi {
@@ -336,7 +334,7 @@ footer {
     margin-top: 16.6rem;
     margin-left: 0.2rem;
     height: 3rem;
-    width: 8rem;
+    width: 8.5rem;
   }
 
   .qrcode {
@@ -382,7 +380,6 @@ footer {
     color: #ffffff;
     display: block;
     transition: 0.3s;}
-
   }
 
   a {
@@ -406,7 +403,6 @@ footer {
     justify-content: space-around;
     align-items: center;
     font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
-    background: #23232e;
     height: 8vh;
   }
   
@@ -422,8 +418,8 @@ footer {
   }
   
   .nav-list li {
-    letter-spacing: 3px;
-    margin-left: 32px;
+    letter-spacing: 0.188rem;
+    margin-left: 2rem;
   }
   
   .mobile-menu {
@@ -432,14 +428,14 @@ footer {
   }
   
   .mobile-menu div {
-    width: 32px;
-    height: 2px;
+    width: 2rem;
+    height: 0.188rem;
     background: #fff;
-    margin: 8px;
+    margin: 0.5rem;
     transition: 0.3s;
   }
   
-  @media (max-width: 999px) {
+  @media (max-width: 450px) {
     body {
       overflow-x: hidden;
     }
@@ -449,7 +445,7 @@ footer {
       right: 0;
       width: 50vw;
       height: 92vh;
-      background: #23232e;
+      background: #2525a8;
       flex-direction: column;
       align-items: center;
       justify-content: space-around;
@@ -472,7 +468,7 @@ footer {
   @keyframes navLinkFade {
     from {
       opacity: 0;
-      transform: translateX(50px);
+      transform: translateX(3.125rem);
     }
     to {
       opacity: 1;
