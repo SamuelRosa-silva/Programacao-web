@@ -1,0 +1,140 @@
+@font-face {
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: oblique;
+    font-weight: 100;
+    src: url(https://fonts.gstatic.com/s/sourcesanspro/v22/6xKwdSBYKcSV-LCoeQqfX1RYOo3qPZZMkidh18S0xR41YDw.woff2) format('woff2');
+    unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+
+.icone {
+    height: 1rem;
+    width: 1rem;
+  }
+
+  body {
+    overflow-x: hidden;
+    background-image: linear-gradient(rgba(39, 53, 139, 0.432), rgba(39, 53, 139, 0.315)), url(./images/bg4.png);
+    background-size: cover;
+    background-blend-mode: multiply;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 104vh;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+img {
+    margin-top: 0.9rem;
+    margin-left: -0.5rem;
+    height: 2.9rem;
+    width: 12.25rem;
+    margin-bottom: 1.25rem;
+}
+
+h1 {
+    color: rgb(255, 255, 255);
+    font-size: 2rem;
+    margin-bottom: 1.875rem;
+    text-align: center;
+    margin-top: 1rem;
+    margin-left: 0rem;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.938rem;
+    width: 100%;
+    max-width: 18.75rem; 
+    margin-left: 6.75rem;
+    margin-top: 2rem;
+}
+
+button {
+    width: 12rem;
+    padding: 0.938rem;
+    background-color: rgba(6, 250, 38, 0.726); 
+    color: white;
+    border: none;
+    border-radius: 0.313rem; 
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.2s ease;
+    box-shadow: 0rem 0.125rem 0.313rem rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+    background-color: #218838;
+    transform: translateY(-0.125rem); 
+    box-shadow: 0rem 0.25rem 0.5rem rgba(0, 0, 0, 0.3); 
+}
+
+@media (max-width: 800px) {
+
+    body {
+        overflow: hidden;
+        background-image: linear-gradient(rgba(21, 36, 134, 0.493), rgba(18, 31, 122, 0.404)), url(./images/bg4.png);
+        background-size: cover;
+        background-blend-mode: multiply;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 104vh;
+        font-family: 'Source Sans Pro', sans-serif;
+    }
+
+    img {
+        margin-top: 0rem;
+        margin-left: 0rem;
+        height: 2.9rem;
+        width: 12.25rem;
+        margin-bottom: 1.25rem;
+    }
+
+    h1 {
+        position: absolute;
+        color: rgb(255, 255, 255);
+        font-size: 2rem;
+        margin-bottom: 1.875rem;
+        text-align: center;
+        margin-top: 1rem;
+        margin-left: 3rem;
+    }
+
+    .button-container {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0.938rem;
+        width: 100%;
+        max-width: 18.75rem; 
+        margin-left: 6.75rem;
+        margin-top: 7rem;
+    }
+
+    button {
+        width: 12rem;
+        padding: 0.938rem;
+        background-color: rgba(6, 250, 38, 0.726); 
+        color: white;
+        border: none;
+        border-radius: 0.313rem; 
+        cursor: pointer;
+        font-weight: bold;
+        transition: all 0.2s ease;
+        box-shadow: 0rem 0.125rem 0.313rem rgba(0, 0, 0, 0.2);
+    }
+
+    button:hover {
+        background-color: #218838;
+        transform: translateY(-0.125rem); 
+        box-shadow: 0rem 0.25rem 0.5rem rgba(0, 0, 0, 0.3); 
+    }
+}
+
+@media (min-width: 800px) {
+    body {overflow: hidden;}
+}
