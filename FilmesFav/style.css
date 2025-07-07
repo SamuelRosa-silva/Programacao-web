@@ -1,93 +1,152 @@
-/*bloco resnponsavel por zerar todas as configs de estilização do site*/
-
+/*Reset page settings*/
 * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
     font-family: "Montserrat", sans-serif;
-    transition: 0.15s linear;
-    text-decoration: none;
-    text-transform: none;
-    outline: none;
+    transition: all 0.15s ease;
 }
-
-/*bloco do corpo do site*/
 
 body {
     color: rgb(255, 231, 16);
-    margin: 0rem;
-    padding: 0rem;
     background: linear-gradient(to bottom, #5c5b5b, #000);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
-/*bloco do cabeçalho*/
-
+/*header settings*/
 header {
     background-color: #000000;
     color: rgb(255, 255, 255);
-    text-align: center;
-    padding: 1em 0;
+    padding: 1rem 0;
 }
 
-/*configuraçõs do imagem do cabeçalho*/
-
-header img {
-    width: 5rem;
-    height: 5rem;
-    position: absolute;
-    right: 32rem;
-    top: 1rem;
-}
-
-/*tamanho limite da pagina*/
-
-main {
+.header-content {
     display: flex;
-    flex-wrap: wrap;
+    align-items: center;
     justify-content: center;
-    padding: 12;
-}
-main {
-    padding-left: 192px;
-    padding-right: 192px;
-    padding-top: 22px;
-    padding-bottom: 22px;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 0 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-/*bloco da background dos filmes*/
+.header-icon {
+    width: 3rem;
+    height: 3rem;
+    object-fit: contain;
+}
+
+header h1 {
+    font-size: clamp(1.5rem, 5vw, 2.5rem);
+    text-align: center;
+    margin: 0;
+}
+
+/*main content*/
+main {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
+    padding: 1.5rem;
+    max-width: 1400px;
+    margin: 0 auto;
+    width: 100%;
+}
 
 .filme {
     background-color: rgb(0, 0, 0);
-    border: 0.063rem solid #575656;
+    border: 1px solid #575656;
     border-radius: 0.5rem;
-    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1);
-    margin: 1em;
-    padding: 1em;
-    max-width: 18.5rem;
-    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
     transition: transform 0.3s, background-color 0.3s;
+    display: flex;
+    flex-direction: column;
 }
-
-/*bloco de corte das imagens*/
 
 .filme img {
-    max-width: 100%;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 2/3;
+    object-fit: cover;
     border-radius: 0.5rem;
+    margin-bottom: 1rem;
 }
 
-/*bloco da animação*/
+.filme h2 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+    color: rgb(255, 231, 16);
+}
+
+.filme p {
+    color: #ddd;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-bottom: 1rem;
+    flex-grow: 1;
+}
 
 .filme:hover {
     color: rgb(0, 0, 0);
     background-color: rgb(206, 207, 206);
-    transform: scale(1.05);
+    transform: scale(1.03);
 }
 
-/*bloco do roda-pe*/
+.filme:hover h2,
+.filme:hover p {
+    color: #000;
+}
 
+/*baseboard*/
 footer {
     background-color: #000000;
     color: white;
     text-align: center;
-    padding: 1em 0;
-    position: flex;
-    width: 100%;
-    bottom: 0;
+    padding: 1rem;
+    margin-top: auto;
+}
+
+/*Media queries*/
+@media screen and (max-width: 600px) {
+    .header-content {
+        flex-direction: row; /* Mantém as imagens e o título em linha */
+        gap: 0.5rem;
+    }
+    
+    .header-icon {
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+    
+    main {
+        grid-template-columns: 1fr;
+        padding: 1rem;
+    }
+}
+
+@media screen and (min-width: 601px) and (max-width: 900px) {
+    main {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (min-width: 901px) and (max-width: 1200px) {
+    main {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media screen and (min-width: 1201px) {
+    main {
+        grid-template-columns: repeat(4, 1fr);
+    }
 }
