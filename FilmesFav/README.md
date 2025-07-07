@@ -1,6 +1,6 @@
-<h1>Site dos meus filmes </h1>
+<h1>Site dos meus filmes favoritos</h1>
 
-<h2>Site criado em html e css, com animações e resposividade<h2>
+<h2>Site criado em html e css, com animações e resposividade para dispositivos de varios tamanhos de tela<h2>
 
 ![Captura de tela 2025-07-07 152154](https://github.com/user-attachments/assets/f9ca88bc-cfbc-4473-9af7-5cc1311dcd56)
 
