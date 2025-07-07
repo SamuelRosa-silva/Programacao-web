@@ -1,99 +1,217 @@
-/* Define estilos para telas com largura máxima de 768px */
-@media (max-width: 768px) {
-    body {
-        padding: 10px;
-    }
-    table {
-        width: 100%;
-    }
-    th, td {
-        padding: 10px;
-    }
-    h1 {
-        font-size: 2em;
-    }
-}
-
-/* Estilos gerais para o corpo da página */
-body {
-    font-family: 'Roboto', sans-serif; 
-    background: linear-gradient(to right, #DBE716, #E4F975); 
-    color: #ffffff; 
+/* Reset e Estilos Base */
+* {
     margin: 0;
-    padding: 20px; 
-    display: flex; 
-    justify-content: center; 
-    align-items: center; 
-    height: 100vh; 
-    flex-direction: column;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-/* Estilos para os títulos h1 */
+:root {
+    --primary-color: #4facfe;
+    --secondary-color: #00f2fe;
+    --dark-bg: #121212;
+    --card-bg: #1e1e1e;
+    --header-bg: #1a365d;
+    --text-light: #e0e0e0;
+    --text-lighter: #ffffff;
+    --border-color: #2d3748;
+    --link-color: #63b3ed;
+    --link-hover: #4299e1;
+    --footer-text: #a0aec0;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--dark-bg);
+    color: var(--text-light);
+    line-height: 1.6;
+    padding: 20px;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Alterado para melhorar em mobile */
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    padding: 20px;
+    margin: 20px auto;
+}
+
 h1 {
-    font-size: 2.5em; 
-    margin-bottom: 20px; 
-    text-transform: uppercase; 
-    letter-spacing: 2px;
-    color: #000000; 
+    font-size: clamp(1.8rem, 4vw, 2.5rem); /* Tamanho responsivo */
+    margin-bottom: 30px;
+    text-align: center;
+    color: var(--text-lighter);
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-weight: 700;
+    background: linear-gradient(90deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--border-color);
 }
 
-/* Estilos para as tabelas */
 table {
-    width: 94%; 
-    border-collapse: collapse; 
-    margin-top: 20px; 
-    background: rgba(255, 255, 255, 0.1); 
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 auto;
+    background-color: var(--card-bg);
     border-radius: 10px;
-    overflow: hidden; 
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); 
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
-/* Estilos para células th e td */
 th, td {
-    padding: 15px; 
-    text-align: center; 
+    padding: 15px;
+    text-align: center;
+    border-bottom: 1px solid var(--border-color);
 }
 
-/* Estilos para cabeçalhos de tabela */
 th {
-    background: rgba(0, 0, 0, 0.7);
-    color: #ffcc00; 
-    text-transform: uppercase; 
-    letter-spacing: 1px; 
+    background-color: var(--header-bg);
+    color: var(--text-lighter);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: clamp(0.7rem, 2vw, 0.9rem); /* Fonte responsiva */
 }
 
-/* Estilos para células de tabela */
 td {
-    background: rgba(0, 0, 0, 0.5); 
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1); 
+    background-color: var(--card-bg);
+    color: var(--text-light);
+    transition: all 0.3s ease;
+    font-size: clamp(0.8rem, 2vw, 1rem); /* Fonte responsiva */
 }
 
 tr:hover td {
-    background: rgba(255, 255, 255, 0.2); 
+    background-color: #4a5568;
+    transform: scale(1.02);
 }
 
-/* Estilos para células do rodapé da tabela */
+a {
+    color: var(--link-color);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+    word-break: break-word; /* Evita quebra de layout */
+}
+
+a:hover {
+    color: var(--link-hover);
+    text-decoration: underline;
+}
+
 tfoot td {
-    text-align: right;
-    font-style: italic; 
-    color: #ffcc00; 
-    background: rgba(0, 0, 0, 0.7); 
-    border: none;
-    padding: 10px;
+    text-align: center;
+    font-style: italic;
+    color: var(--footer-text);
+    background-color: var(--header-bg);
+    font-size: 0.9rem;
 }
 
-/* Repete os estilos para telas com largura máxima de 768px para garantir a prioridade */
+/* Responsividade Aprimorada */
+@media (max-width: 992px) {
+    .container {
+        padding: 15px;
+    }
+    
+    th, td {
+        padding: 12px 8px;
+    }
+}
+
 @media (max-width: 768px) {
     body {
         padding: 10px;
+        align-items: flex-start;
     }
-    table {
-        width: 100%;
-    }
-    th, td {
+    
+    .container {
         padding: 10px;
     }
+    
+    table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+    
+    th, td {
+        padding: 10px 6px;
+        font-size: 0.85rem;
+    }
+    
     h1 {
-        font-size: 2em;
+        margin-bottom: 20px;
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 576px) {
+    body {
+        padding: 5px;
+    }
+    
+    .container {
+        padding: 5px;
+    }
+    
+    h1 {
+        font-size: 1.5rem;
+        letter-spacing: 1px;
+    }
+    
+    th, td {
+        padding: 8px 4px;
+        font-size: 0.75rem;
+    }
+    
+    table {
+        border-radius: 5px;
+    }
+}
+
+/* Modo de tabela vertical para telas muito pequenas */
+@media (max-width: 400px) {
+    table {
+        display: flex;
+        overflow-x: visible;
+        white-space: normal;
+    }
+    
+    tbody {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    tr {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 15px;
+        border-radius: 5px;
+        overflow: hidden;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    
+    td, th {
+        display: block;
+        text-align: left;
+        padding: 8px 10px;
+        border-bottom: none;
+    }
+    
+    td:before {
+        content: attr(data-label);
+        font-weight: bold;
+        display: inline-block;
+        width: 120px;
+        color: var(--primary-color);
+    }
+    
+    thead {
+        display: none;
     }
 }
