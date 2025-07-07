@@ -1,137 +1,453 @@
-
 :root {
-    --main-color: #d3ad7f;
-    --cla: #FFA90A;
-    --vrd: #275D23;
-    --clm: #FD0007;
-    --bg: rgb(21,3,3);
-    --bl: #FFFFFF;
-    --border: 0.1rem solid rgba(255, 255, 255, 0.3);
-    font-size: 10px;
-}
-
-/*bloco responsavel pelo cabeçalho do site*/
-
-.header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 99;
-    border-bottom: var(--border);
-    background-color: var(--bg);
-}
-
-/*bloco responsavel por configurações de epaçaento e confgs dos elementos do cabeçalho*/
-
-.header section {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
-}
-
-/*cor e tamanho de ofnte das palavras da nav bar*/
-
-.navbar a {
-    margin: 0.35rem;
-    font-size: 1.9rem;
-    color: var(--bl)
-}
-
-.navbar a:hover {
-    color: var(--main-color);
-    border-bottom: 0.1rem solid var(--border);
-    padding-bottom: 0.4rem;
-    font-size: 2rem;
-}
-
-.icons img{
-    margin: 1rem;
-    cursor: pointer;
-}
-
-/*bloco responsavel pelo espaçamento da animação dos simbolos da cabeçalho*/
-
-.icons img:hover {
-    width: 30px;
-    height: 30px;
-}
-
-
-.header section {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
+    --primary: #006341;
+    --secondary: #FFD700;
+    --accent: #FD0007;
+    --dark: #121212;
+    --light: #FFFFFF;
+    --gray: #E5E5E5;
+    --text: #333333;
+    --text-light: #777777;
+    --font-primary: 'Poppins', sans-serif;
+    --font-secondary: 'Racing Sans One', cursive;
+    --transition: all 0.3s ease;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --border-radius: 8px;
 }
 
 * {
-    font-family: "Roboto", sans-serif;
-    transition: 0.15s linear;
-    border: none;
     margin: 0;
-    text-decoration: none;
     padding: 0;
-    text-transform: none;
-    outline: none;
+    box-sizing: border-box;
 }
 
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-primary);
+    font-size: 1.6rem;
+    line-height: 1.6;
+    color: var(--text);
+    background-color: var(--light);
+    overflow-x: hidden;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* Header Styles */
 .header {
     position: fixed;
     top: 0;
     left: 0;
-    right: 0;
-    z-index: 99;
-    border-bottom: var(--border);
-    background-color: var(--bg);
-}
-
-.home-container {
-    background: url("https://www.gov.br/planalto/pt-br/vice-presidencia/central-de-conteudo/noticias/2023/sancao-de-lei-transforma-ayrton-senna-em-patrono-do-esporte-brasileiro/sena.jpeg/@@images/92e89883-3f20-4998-9635-b9f890748c2c.jpeg");
-    height: 100vh;
-    background-position: center;
-    background-size: cover;
-}
-
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-}
-
-header {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 1em;
-}
-
-#bio {
-    max-width: 600px;
-    margin: 20px auto;
-    text-align: center;
-}
-
-img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 50%;
-}
-
-#achievements {
-    max-width: 600px;
-    margin: 20px auto;
-}
-
-footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 1em;
-    position: fixed;
-    bottom: 0;
     width: 100%;
+    z-index: 1000;
+    background-color: var(--light);
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 2rem;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    text-decoration: none;
+}
+
+.logo img {
+    width: 9rem;
+    height: 9rem;
+    object-fit: contain;
+}
+
+.logo span {
+    font-family: var(--font-secondary);
+    font-size: 2.4rem;
+    color: var(--primary);
+    font-weight: 700;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+
+.navbar a {
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: var(--text);
+    text-decoration: none;
+    transition: var(--transition);
+    position: relative;
+}
+
+.navbar a:hover {
+    color: var(--primary);
+}
+
+.navbar a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--primary);
+    transition: var(--transition);
+}
+
+.navbar a:hover::after {
+    width: 100%;
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 2.4rem;
+    color: var(--text);
+    cursor: pointer;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    height: 60vh;
+    background: url('https://www.gov.br/planalto/pt-br/vice-presidencia/central-de-conteudo/noticias/2023/sancao-de-lei-transforma-ayrton-senna-em-patrono-do-esporte-brasileiro/sena.jpeg/@@images/92e89883-3f20-4998-9635-b9f890748c2c.jpeg') no-repeat center center/cover;
+    margin-top: 7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    color: var(--light);
+    padding: 2rem;
+}
+
+.hero h1 {
+    font-size: 6rem;
+    font-family: var(--font-secondary);
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.hero p {
+    font-size: 2rem;
+    font-weight: 300;
+}
+
+/* Section Styles */
+.section {
+    padding: 8rem 0;
+}
+
+.section.dark {
+    background-color: var(--dark);
+    color: var(--light);
+}
+
+.section h2 {
+    font-size: 3.6rem;
+    font-family: var(--font-secondary);
+    color: var(--primary);
+    margin-bottom: 4rem;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.section.dark h2 {
+    color: var(--secondary);
+}
+
+.content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.content p {
+    margin-bottom: 2rem;
+    font-size: 1.8rem;
+    line-height: 1.8;
+}
+
+/* Table Styles */
+.table-responsive {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 2rem 0;
+    box-shadow: var(--shadow);
+}
+
+th, td {
+    padding: 1.5rem;
+    text-align: left;
+    border-bottom: 1px solid var(--gray);
+}
+
+th {
+    background-color: var(--primary);
+    color: var(--light);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+tr:nth-child(even) {
+    background-color: rgba(0, 99, 65, 0.1);
+}
+
+tr:hover {
+    background-color: rgba(0, 99, 65, 0.2);
+}
+
+/* Gallery Styles */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 4rem;
+}
+
+.gallery-item {
+    overflow: hidden;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.gallery-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+    transition: var(--transition);
+}
+
+.gallery-item:hover img {
+    transform: scale(1.05);
+}
+
+/* Footer Styles */
+.footer {
+    background-color: var(--dark);
+    color: var(--light);
+    padding: 6rem 0 0;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 4rem;
+    margin-bottom: 4rem;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.footer-logo img {
+    width: 6rem;
+    height: 6rem;
+    object-fit: contain;
+}
+
+.footer-logo span {
+    font-family: var(--font-secondary);
+    font-size: 2.4rem;
+    color: var(--light);
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.footer-links a {
+    color: var(--light);
+    text-decoration: none;
+    transition: var(--transition);
+    font-size: 1.6rem;
+}
+
+.footer-links a:hover {
+    color: var(--secondary);
+    padding-left: 5px;
+}
+
+.footer-social {
+    display: flex;
+    gap: 2rem;
+}
+
+.footer-social a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 4rem;
+    height: 4rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    color: var(--light);
+    font-size: 1.8rem;
+    transition: var(--transition);
+}
+
+.footer-social a:hover {
+    background-color: var(--secondary);
+    color: var(--dark);
+    transform: translateY(-3px);
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 2rem 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 1.4rem;
+    color: var(--text-light);
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+    .hero h1 {
+        font-size: 4.8rem;
+    }
+    
+    .hero p {
+        font-size: 1.8rem;
+    }
+    
+    .section h2 {
+        font-size: 3.2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        position: fixed;
+        top: 8rem;
+        left: -100%;
+        width: 80%;
+        height: calc(100vh - 8rem);
+        background-color: var(--light);
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 3rem;
+        gap: 2rem;
+        transition: var(--transition);
+        box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    .navbar.active {
+        left: 0;
+    }
+    
+    .menu-toggle {
+        display: block;
+    }
+    
+    .hero {
+        height: 50vh;
+        margin-top: 8rem;
+    }
+    
+    .hero h1 {
+        font-size: 3.6rem;
+    }
+    
+    .hero p {
+        font-size: 1.6rem;
+    }
+    
+    .section {
+        padding: 6rem 0;
+    }
+    
+    .section h2 {
+        font-size: 2.8rem;
+        margin-bottom: 3rem;
+    }
+    
+    .content p {
+        font-size: 1.6rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .header-container {
+        padding: 1rem 1.5rem;
+    }
+    
+    .logo span {
+        font-size: 2rem;
+    }
+    
+    .hero {
+        height: 40vh;
+    }
+    
+    .hero h1 {
+        font-size: 3rem;
+    }
+    
+    .section h2 {
+        font-size: 2.4rem;
+    }
+    
+    .footer-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .footer-logo {
+        justify-content: center;
+        text-align: center;
+        flex-direction: column;
+    }
+    
+    .footer-links {
+        align-items: center;
+    }
+    
+    .footer-social {
+        justify-content: center;
+    }
 }
